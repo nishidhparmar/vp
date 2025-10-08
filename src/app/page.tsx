@@ -1,8 +1,8 @@
 import Header from '@/components/Header'
 import LenisProvider from '@/providers/LenisProvider'
 import AboutSection from '@/sections/AboutSection'
-import HeroSection from '@/sections/HeroSection'
-import LoaderSection from '@/sections/LoaderSection'
+import HeroSection2 from '@/sections/HeroSection2'
+import LoaderSection2 from '@/sections/LoaderSection2'
 import React from 'react'
 import AnimatedCursor from 'react-animated-cursor'
 
@@ -16,9 +16,10 @@ function page() {
           outerScale={4}
           innerStyle={{ background: 'transparent', border: '1px solid rgb(41, 192, 190)' }}
         />
-        <LoaderSection />
+        <LoaderSection2 />
         <Header />
-        <HeroSection />
+        {/* <HeroSection /> */}
+        <HeroSection2 />
         <AboutSection />
         <div className='h-screen'></div>
       </LenisProvider>

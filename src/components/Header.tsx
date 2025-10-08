@@ -58,7 +58,7 @@ const Header = () => {
 
     return (
         <Fragment>
-            <div ref={containerRef} className='h-[10vh] shadow bg-dark-blue z-10 fixed w-full top-0 '>
+            <div ref={containerRef} className='h-[10vh] shadow backdrop-blur-lg z-10 fixed w-full top-0 '>
                 <Container className='flex items-center justify-between w-full h-full'>
                     <div className='font-bold logo text-netural-white text-2xl flex items-center'>
                         VATSAL & PARTNER
