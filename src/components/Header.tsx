@@ -66,7 +66,7 @@ const Header = () => {
                     <div className='lg:flex hidden items-center gap-6 text-netural-white font-semibold text-base'>
                         <Link href={'#home'} >HOME</Link>
                         <Link href={'#about'} >ABOUT US</Link>
-                        <Link href={'/'} >SERVICES</Link>
+                        <Link href={'#services'} >SERVICES</Link>
                         <Link href={'/'} >OUR TEAM</Link>
                         <Link href={'/'} >CUSTOM REVIEW</Link>
                         <Link href={'/'} >SECURE PAYMENT PAGE</Link>

@@ -3,6 +3,7 @@ import LenisProvider from '@/providers/LenisProvider'
 import AboutSection from '@/sections/AboutSection'
 import HeroSection2 from '@/sections/HeroSection2'
 import LoaderSection2 from '@/sections/LoaderSection2'
+import ServicesSection from '@/sections/ServicesSection'
 import React from 'react'
 import AnimatedCursor from 'react-animated-cursor'
 
@@ -21,7 +22,7 @@ function page() {
         {/* <HeroSection /> */}
         <HeroSection2 />
         <AboutSection />
-        <div className='h-screen'></div>
+        <ServicesSection />
       </LenisProvider>
     </div>
   )
