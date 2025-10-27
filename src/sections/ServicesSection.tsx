@@ -21,7 +21,31 @@ const ServicesSection = () => {
             const imageRight = section.querySelector(".img-right")
             const textContentLeft = section.querySelector(".content-left")
             const textContentRight = section.querySelector(".content-right")
-
+            // Stack animation for the whole container
+            gsap.fromTo(
+                section,
+                {
+                    y: 100,             // start slightly below
+                    scale: 0.9,         // slightly smaller
+                    opacity: 0,
+                    zIndex: 0,
+                },
+                {
+                    y: 0,
+                    scale: 1,
+                    opacity: 1,
+                    zIndex: 1,
+                    duration: 1,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 85%",
+                        end: "top 60%",
+                        scrub: 1,
+                        // markers: true, // remove or enable for debugging
+                    },
+                }
+            )
             // gsap.fromTo(section, {
             //     backgroundColor: '#02515c',
             //     borderRadius: '20px',
@@ -169,7 +193,7 @@ const ServicesSection = () => {
     }, { scope: containerRef })
 
     return (
-        <div ref={containerRef} className='min-h-screen bg-dark-blue overflow-hidden' id='services'>
+        <div ref={containerRef} className='min-h-screen  bg-[url("/images/review-mesh.png")] bg-no-repeat bg-cover overflow-hidden' id='services'>
             <Heading
                 className='text-netural-white text-center pt-[100px]'
                 darkColorText='Our'

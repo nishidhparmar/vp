@@ -20,9 +20,9 @@ const Button: React.FC<ButtonProps> = ({
                 background: "radial-gradient(ellipse at 50% 50%,#29c0be, #26a4a2)",
                 ...style,
             }}
-            className={cn(`w-fit px-6 py-3 rounded-lg font-bold text-netural-black flex items-center gap-4 cursor-pointer btn ${className}`)}
+            className={cn(`w-fit px-6 py-3 rounded-lg font-bold text-[#0a003b] flex items-center gap-4 cursor-pointer btn ${className}`)}
         >
-            {icon && <span className="text-xl text-netural-black">{icon}</span>}
+            {icon && <span className="text-xl text-[#0a003b]">{icon}</span>}
             {children}
         </button>
     )

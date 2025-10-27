@@ -11,6 +11,7 @@ import gsap from 'gsap'
 import React, { useRef } from 'react'
 import Button from '@/components/Button'
 import Image from 'next/image'
+import { MdMiscellaneousServices } from 'react-icons/md'
 
 const AboutSection = () => {
     const containerRef = useRef(null)
@@ -99,7 +100,9 @@ const AboutSection = () => {
                     <Heading darkColorText='About' blueColorText='Us' />
                     <p className='text-2xl font-semibold text-netural-black t1'>Welcome to Pinnacle Accounting & Tax Consultants</p>
                     <p className='text-lg font-medium text-netural-black/10 t2 leading-[36px]'>Pinnacle Accounting & Tax Consultants provides full accounting services for business and individuals throughout the year. We believe that accounting and tax is not only about numbers, it is more about personal and business goals. We understand the needs of each client and customise our approach accordingly. We strive to achieve 100% satisfaction in client experience using our expertise. We believe that the growth of our client is our growth. </p>
-                    <Button className='mt-6'>Our Services</Button>
+                    <Button className='mt-6'
+                        icon={<MdMiscellaneousServices className='text-netural-black text-xl ' />}
+                    >Our Services</Button>
                 </div>
                 <div className='w-1/2 flex flex-col pl-6  about-img-wrapper'>
                     <div className='w-[500px] about-image-wrapper h-[300px] self-end border-4 border-white overflow-hidden rounded-lg'>

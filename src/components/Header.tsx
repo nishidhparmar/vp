@@ -1,5 +1,5 @@
 "use client"
-import React, { Fragment, useRef, useState } from 'react'
+import React, { Fragment, useRef } from 'react'
 import Container from './Container'
 import Link from 'next/link'
 import { useGSAP } from '@gsap/react'
@@ -53,12 +53,21 @@ const Header = () => {
             y: -100,
             duration: 1,
         })
+        gsap.to('.d-header', {
+            backgroundColor: '#02515c',
+            scrollTrigger: {
+                trigger: '#about',
+                start: '+=300 90%',
+                end: '+=0 30%',
+                scrub: 1,
+            }
+        })
 
-    }, { scope: containerRef })
+    })
 
     return (
         <Fragment>
-            <div ref={containerRef} className='h-[10vh] shadow backdrop-blur-lg z-10 fixed w-full top-0 '>
+            <div ref={containerRef} className='h-[10vh] d-header shadow backdrop-blur-lg  z-10 fixed w-full top-0 '>
                 <Container className='flex items-center justify-between w-full h-full'>
                     <div className='font-bold logo text-netural-white text-2xl flex items-center'>
                         VATSAL & PARTNER
@@ -67,7 +76,7 @@ const Header = () => {
                         <Link href={'#home'} >HOME</Link>
                         <Link href={'#about'} >ABOUT US</Link>
                         <Link href={'#services'} >SERVICES</Link>
-                        <Link href={'/'} >OUR TEAM</Link>
+                        <Link href={'/#team'} >OUR TEAM</Link>
                         <Link href={'/'} >CUSTOM REVIEW</Link>
                         <Link href={'/'} >SECURE PAYMENT PAGE</Link>
 
@@ -89,7 +98,7 @@ const Header = () => {
                 <div className='flex flex-col items-start text-5xl gap-8 p-10 text-netural-white font-semibold w-full'>
                     <Link onClick={() => closeMenu()} className='pb-2 mlink' href={'#home'} >HOME</Link>
                     <Link onClick={() => closeMenu()} className='pb-2 mlink' href={'#about'} >ABOUT US</Link>
-                    <Link onClick={() => closeMenu()} className='pb-2 mlink' href={'/'} >SERVICES</Link>
+                    <Link onClick={() => closeMenu()} className='pb-2 mlink' href={'/#team'} >SERVICES</Link>
                     <Link onClick={() => closeMenu()} className='pb-2 mlink' href={'/'} >OUR TEAM</Link>
                     <Link onClick={() => closeMenu()} className='pb-2 mlink' href={'/'} >CUSTOM REVIEW</Link>
                     <Link onClick={() => closeMenu()} className='pb-2 mlink' href={'/'} >SECURE PAYMENT PAGE</Link>

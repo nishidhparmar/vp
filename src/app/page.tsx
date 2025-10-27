@@ -1,8 +1,12 @@
+import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import LenisProvider from '@/providers/LenisProvider'
 import AboutSection from '@/sections/AboutSection'
+import ArticleSection from '@/sections/ArticleSection'
 import HeroSection2 from '@/sections/HeroSection2'
 import LoaderSection2 from '@/sections/LoaderSection2'
+import OurTeamSection from '@/sections/OurTeamSection'
+import ReviewsSection from '@/sections/ReviewsSection'
 import ServicesSection from '@/sections/ServicesSection'
 import React from 'react'
 import AnimatedCursor from 'react-animated-cursor'
@@ -23,6 +27,10 @@ function page() {
         <HeroSection2 />
         <AboutSection />
         <ServicesSection />
+        <OurTeamSection />
+        <ReviewsSection />
+        <ArticleSection />
+        <Footer />
       </LenisProvider>
     </div>
   )
