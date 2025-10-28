@@ -12,6 +12,7 @@ import React, { useRef } from 'react'
 import Button from '@/components/Button'
 import Image from 'next/image'
 import { MdMiscellaneousServices } from 'react-icons/md'
+import Link from 'next/link'
 
 const AboutSection = () => {
     const containerRef = useRef(null)
@@ -42,7 +43,7 @@ const AboutSection = () => {
 
         gsap.to(text2.chars, {
             stagger: 0.4,
-            color: 'rgb(46, 46, 46, 0.6)',
+            color: '#02515C',
             ease: 'bounce',
             scrollTrigger: {
                 trigger: text1.words,
@@ -94,15 +95,17 @@ const AboutSection = () => {
         scope: containerRef
     })
     return (
-        <div ref={containerRef} id='about'>
-            <Container className='p-section-padding-yx pt-[30vh] min-h-screen flex overflow-hidden'>
+        <div ref={containerRef} id='about' className='bg-[url("/images/about-mesh.png")] bg-no-repeat bg-cover'>
+            <Container className='p-section-padding-yx  min-h-screen flex overflow-hidden gap-4'>
                 <div className='w-1/2 space-y-4 flex flex-col justify-start'>
                     <Heading darkColorText='About' blueColorText='Us' />
                     <p className='text-2xl font-semibold text-netural-black t1'>Welcome to Pinnacle Accounting & Tax Consultants</p>
-                    <p className='text-lg font-medium text-netural-black/10 t2 leading-[36px]'>Pinnacle Accounting & Tax Consultants provides full accounting services for business and individuals throughout the year. We believe that accounting and tax is not only about numbers, it is more about personal and business goals. We understand the needs of each client and customise our approach accordingly. We strive to achieve 100% satisfaction in client experience using our expertise. We believe that the growth of our client is our growth. </p>
-                    <Button className='mt-6'
-                        icon={<MdMiscellaneousServices className='text-netural-black text-xl ' />}
-                    >Our Services</Button>
+                    <p className='text-lg font-medium text-netural-black/20 t2 leading-[36px]'>Pinnacle Accounting & Tax Consultants provides full accounting services for business and individuals throughout the year. We believe that accounting and tax is not only about numbers, it is more about personal and business goals. We understand the needs of each client and customise our approach accordingly. We strive to achieve 100% satisfaction in client experience using our expertise. We believe that the growth of our client is our growth. </p>
+                    <Link href={'/#services'}>
+                        <Button className='mt-6'
+                            icon={<MdMiscellaneousServices className='text-xl ' />}
+                        >Our Services</Button>
+                    </Link>
                 </div>
                 <div className='w-1/2 flex flex-col pl-6  about-img-wrapper'>
                     <div className='w-[500px] about-image-wrapper h-[300px] self-end border-4 border-white overflow-hidden rounded-lg'>

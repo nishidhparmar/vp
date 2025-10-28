@@ -113,13 +113,17 @@ const ArticleSection = () => {
                                     className={cn('shadow-lg rounded-lg card', isOpen ? 'col-span-12  h-[500px]' : `col-span-4  h-[300px]   bg-cover bg-no-repeat `)}
                                     style={{ backgroundImage: `url(${i.image})` }}
                                 >
-                                    {isOpen ? <div className='bg-netural-white h-full w-full rounded-lg flex gap-10 p-4'>
+                                    {isOpen ? <div className='bg-[url("/images/about-mesh.png")] bg-no-repeat bg-cover h-full w-full rounded-lg flex '>
                                         <div className='w-1/2 h-full shrink-0'>
-                                            <Image src={`${i.image}`} alt='article' className='rounded-lg w-full h-full' width={500} height={500} />
+                                            <Image src={`${i.image}`} alt='article' className='rounded-l-lg w-full h-full' width={500} height={500} />
                                         </div>
-                                        <div className='space-y-4'> <p className='text-xs font-semibold line-clamp-1 text-netural-black'>{i.date}</p>
-                                            <p className='text-netural-black text-xl font-semibold '>{i.title}</p>
-                                            <p className='text-netural-black font-medium text-base'>{i.description}</p>
+                                        <div className='space-y-4 p-8 backdrop-grayscale-100'>
+                                            <div className='flex items-start justify-between gap-4'>
+                                                <p className='text-dark-blue text-xl font-semibold leading-[35px]'>{i.title}</p>
+                                                <p className='text-xs font-semibold line-clamp-1 text-dark-blue shrink-0'>{i.date}</p>
+                                            </div>
+
+                                            <p className='text-netural-black/80 font-medium text-base leading-[30px]'>{i.description}</p>
                                             <button onClick={() => {
                                                 setIsOpen(false)
                                                 setActiveArticleId(null)

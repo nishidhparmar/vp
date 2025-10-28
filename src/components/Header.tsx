@@ -54,7 +54,7 @@ const Header = () => {
             duration: 1,
         })
         gsap.to('.d-header', {
-            backgroundColor: '#02515c',
+            backgroundColor: 'rgba(2, 81, 92, 0.8)',
             scrollTrigger: {
                 trigger: '#about',
                 start: '+=300 90%',
@@ -67,18 +67,18 @@ const Header = () => {
 
     return (
         <Fragment>
-            <div ref={containerRef} className='h-[10vh] d-header shadow backdrop-blur-lg  z-10 fixed w-full top-0 '>
+            <div ref={containerRef} className='h-[10vh] d-header backdrop-blur-xl border-b border-white/10 shadow-lg z-10 fixed w-full top-0'>
                 <Container className='flex items-center justify-between w-full h-full'>
                     <div className='font-bold logo text-netural-white text-2xl flex items-center'>
                         VATSAL & PARTNER
                     </div>
-                    <div className='lg:flex hidden items-center gap-6 text-netural-white font-semibold text-base'>
+                    <div className='lg:flex hidden items-center gap-6 text-netural-white font-semibold text-base uppercase'>
                         <Link href={'#home'} >HOME</Link>
                         <Link href={'#about'} >ABOUT US</Link>
                         <Link href={'#services'} >SERVICES</Link>
                         <Link href={'/#team'} >OUR TEAM</Link>
-                        <Link href={'/'} >CUSTOM REVIEW</Link>
-                        <Link href={'/'} >SECURE PAYMENT PAGE</Link>
+                        <Link href={'/#review'} >Testimonials</Link>
+                        <Link href={'/'} >PAY NOW</Link>
 
                     </div>
                     <div className='flex lg:hidden text-netural-white' onClick={() => {
@@ -95,13 +95,13 @@ const Header = () => {
                 }} className='text-netural-white text-3xl absolute right-10 top-[2.5vh]'>
                     X
                 </div>
-                <div className='flex flex-col items-start text-5xl gap-8 p-10 text-netural-white font-semibold w-full'>
+                <div className='flex flex-col items-start text-5xl gap-8 p-10 text-netural-white font-semibold w-full uppercase'>
                     <Link onClick={() => closeMenu()} className='pb-2 mlink' href={'#home'} >HOME</Link>
                     <Link onClick={() => closeMenu()} className='pb-2 mlink' href={'#about'} >ABOUT US</Link>
-                    <Link onClick={() => closeMenu()} className='pb-2 mlink' href={'/#team'} >SERVICES</Link>
-                    <Link onClick={() => closeMenu()} className='pb-2 mlink' href={'/'} >OUR TEAM</Link>
-                    <Link onClick={() => closeMenu()} className='pb-2 mlink' href={'/'} >CUSTOM REVIEW</Link>
-                    <Link onClick={() => closeMenu()} className='pb-2 mlink' href={'/'} >SECURE PAYMENT PAGE</Link>
+                    <Link onClick={() => closeMenu()} className='pb-2 mlink' href={'/#services'} >SERVICES</Link>
+                    <Link onClick={() => closeMenu()} className='pb-2 mlink' href={'/#team'} >OUR TEAM</Link>
+                    <Link onClick={() => closeMenu()} className='pb-2 mlink' href={'/#review'} >Testimonials</Link>
+                    <Link onClick={() => closeMenu()} className='pb-2 mlink' href={'/'} >PAY NOW</Link>
                 </div>
             </div>
 

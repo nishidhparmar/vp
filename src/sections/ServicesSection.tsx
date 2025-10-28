@@ -107,7 +107,7 @@ const ServicesSection = () => {
                         scrollTrigger: {
                             trigger: textContentLeft,
                             start: "top 80%",
-                            end: "bottom 70%",
+                            end: "+=200 70%",
                             scrub: 1,
                         },
                     }
@@ -140,7 +140,7 @@ const ServicesSection = () => {
                         scrollTrigger: {
                             trigger: textContentRight,
                             start: "top 80%",
-                            end: "bottom 70%",
+                            end: "+=200 70%",
                             scrub: 1,
                         },
                     }
@@ -162,7 +162,7 @@ const ServicesSection = () => {
                         scrollTrigger: {
                             trigger: section,
                             start: "top 85%",
-                            end: "bottom 70%",
+                            end: "+=400",
                             scrub: 1,
                         }
                     }
@@ -183,7 +183,7 @@ const ServicesSection = () => {
                         scrollTrigger: {
                             trigger: section,
                             start: "top 85%",
-                            end: "bottom 70%",
+                            end: "+=400",
                             scrub: 1,
                         }
                     }

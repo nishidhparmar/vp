@@ -1,7 +1,6 @@
 "use client"
 import Container from '@/components/Container'
 import { useGSAP } from '@gsap/react'
-import Image from 'next/image'
 import gsap from 'gsap'
 import SplitText from 'gsap/SplitText'
 import ScrollTrigger from 'gsap/ScrollTrigger'
@@ -11,6 +10,8 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 import React, { useRef } from 'react'
 import { SlCalender } from 'react-icons/sl'
 import Button from '@/components/Button'
+import { FaPhoneVolume } from 'react-icons/fa6'
+import Link from 'next/link'
 
 const HeroSection2 = () => {
     const containerRef = useRef(null)
@@ -72,7 +73,7 @@ const HeroSection2 = () => {
         })
 
         gsap.to('.t2', {
-            xPercent: -80,
+            xPercent: -50,
             color: '#29c0be',
             duration: 6,
             scrollTrigger: {
@@ -120,14 +121,27 @@ const HeroSection2 = () => {
                 <div className="w-full pt-[15vh] parallex">
                     <p className="text-light-blue font-semibold text-2xl t1"># Your Tax Consultants</p>
                     <p className="text-netural-white font-semibold lg:space-y-0 text-[200px] text-nowrap uppercase t2 leading-[200px] inline-block">
-                        Experienced Exceptional Accounting Services
+                        {/* Experienced Exceptional Accounting Services */}
+                        Experienced Exceptional
+
                     </p>
                     <p className="text-netural-white font-normal t3 text-xl leading-[25px]">
                         Unlock Your Potential with Personalized Accounting Solutions from Pinnacle Accounting & Tax Consultants
                     </p>
-                    <Button className="mt-10" icon={<SlCalender className="text-netural-black text-xl" />}>
-                        Book Appointment
-                    </Button>
+                    <div className='flex items-center gap-4'>
+                        <Link target='_blank' href={'https://calendly.com/pinnacle-accounting'}>
+                            <Button className="mt-10" icon={<SlCalender className="text-xl" />}>
+                                Book Appointment
+                            </Button>
+                        </Link>
+                        <Link target='_blank' href={'tel:+1 416-606-0079'}>
+                            <Button variant='transparent' className='mt-10 border-light-blue border-[1px] text-netural-white' icon={<FaPhoneVolume className='text-netural-white text-xl ' />}>
+                                +1 416-606-0079
+                            </Button>
+
+                        </Link>
+
+                    </div>
                 </div>
             </Container>
         </div>

@@ -54,7 +54,7 @@ const OurTeamSection = () => {
         scope: containerRef
     })
     return (
-        <div id='team' ref={containerRef}>
+        <div id='team' ref={containerRef} className='bg-[url("/images/about-mesh.png")] bg-no-repeat bg-cover'>
             <Container className='p-section-padding-yx h-screen'>
                 <div className='space-y-4 h-full '>
                     <Heading darkColorText="Our" blueColorText='Team' />

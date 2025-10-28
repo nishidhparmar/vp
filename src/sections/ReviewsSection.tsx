@@ -15,7 +15,7 @@ export default function ReviewsSection() {
         {
             loop: true,
             slides: {
-                perView: 2,
+                perView: 3,
                 spacing: 15,
             },
         },
@@ -61,7 +61,7 @@ export default function ReviewsSection() {
     const handleNext = () => sliderRef.current?.next()
 
     return (
-        <div className=" flex items-center justify-center bg-[url('/images/review-mesh.png')] bg-no-repeat bg-cover"
+        <div id="review" className=" flex items-center justify-center bg-[url('/images/review-mesh.png')] bg-no-repeat bg-cover"
         // style={{
         //     background: "radial-gradient(circle at 50% 50%,#086f79, #05606b, rgba(2,81,92,1))",
         // }}
@@ -74,10 +74,10 @@ export default function ReviewsSection() {
                         .map((_, index) => (
                             <div
                                 key={index}
-                                className="keen-slider__slide slider bg-white/10 backdrop-blur-3xl border border-white/20 shadow-lg rounded-2xl h-[300px] text-white text-2xl flex gap-4 p-4 "
+                                className="keen-slider__slide bg-white/10 backdrop-blur-2xl border border-white/20 shadow rounded-3xl h-[320px] flex flex-col justify-between p-6 text-left text-white hover:bg-white/15 "
                             >
 
-                                <div className="w-[250px] h-full shrink-0">
+                                {/* <div className="w-[250px] h-full shrink-0">
                                     <Image
                                         src={`/images/team/${index + 1}.jpg`}
                                         alt="reviewer"
@@ -85,33 +85,35 @@ export default function ReviewsSection() {
                                         height={200}
                                         className="w-full h-full object-cover object-top"
                                     />
-                                </div>
-                                <div className="p-4">
-                                    <p className="font-bold text-xl mb-2">John Wick</p>
-                                    <p className="font-medium text-base mb-10 line-clamp-5">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit deleniti, quas
-                                        earum maiores nihil, quidem molestias officia amet provident quo laudantium sint
-                                        sed velit sunt, nisi impedit odio quod? Dolor.
+                                </div> */}
+                                <div>
+                                    <p className="font-semibold text-lg mb-3 text-white/90">John Wick</p>
+                                    <p className="text-base text-white/80 leading-relaxed line-clamp-5">
+                                        “Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, adipisci
+                                        minus corrupti repudiandae nemo delectus assumenda. Quae pariatur facilis
+                                        inventore deleniti illum.”
                                     </p>
-                                    <ReactStars edit={false} count={5} value={5} size={24} color2={"oklch(87.9% 0.169 91.605)"} />
+                                </div>
+                                <div className="mt-6">
+                                    <ReactStars edit={false} count={5} value={5} size={22} color2={"#00fff0"} />
                                 </div>
                             </div>
                         ))}
                 </div>
 
                 {/* Navigation Buttons */}
-                <div className="flex  gap-4">
+                <div className="flex justify-start gap-6 mt-8">
                     <button
                         onClick={handlePrev}
-                        className="px-4 py-4 rounded-full bg-white/20 hover:bg-white/40 text-white transition-all"
+                        className="group relative w-12 h-12 rounded-full bg-white/10 hover:bg-white/30 backdrop-blur-md transition-all flex items-center justify-center"
                     >
-                        <GrNext className="rotate-180" />
+                        <GrNext className="rotate-180 text-white text-xl group-hover:scale-110 transition-transform" />
                     </button>
                     <button
                         onClick={handleNext}
-                        className="px-4 py-4 rounded-full bg-white/20 hover:bg-white/40 text-white transition-all"
+                        className="group relative w-12 h-12 rounded-full bg-white/10 hover:bg-white/30 backdrop-blur-md transition-all flex items-center justify-center"
                     >
-                        <GrNext />
+                        <GrNext className="text-white text-xl group-hover:scale-110 transition-transform" />
                     </button>
                 </div>
             </Container>
