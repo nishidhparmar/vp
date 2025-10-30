@@ -13,13 +13,14 @@ const LoaderSection4 = () => {
         const split = SplitText.create(".text", {
             type: "chars",
             charsClass: "char",
+            smartWrap: true
         });
 
         const tl = gsap.timeline({
             defaults: { ease: "power3.out" },
         });
 
-        // Simulated loading progress (feels natural)
+        // Simulated loading progress
         const count = { val: 0 };
         tl.to(count, {
             val: 100,
@@ -33,18 +34,22 @@ const LoaderSection4 = () => {
         });
 
         // Characters fly in with scale & blur
-        tl.from(split.chars, {
-            yPercent: 150,
-            scale: 0.8,
-            opacity: 0,
-            filter: "blur(8px)",
-            stagger: {
-                each: 0.05,
-                from: "center",
+        tl.from(
+            split.chars,
+            {
+                yPercent: 150,
+                scale: 0.8,
+                opacity: 0,
+                filter: "blur(8px)",
+                stagger: {
+                    each: 0.05,
+                    from: "center",
+                },
+                duration: 1.5,
+                ease: "back.out(1.7)",
             },
-            duration: 1.5,
-            ease: "back.out(1.7)",
-        }, "<0.3");
+            "<0.3"
+        );
 
         // Subtle glowing color effect
         tl.to(split.chars, {
@@ -60,11 +65,15 @@ const LoaderSection4 = () => {
             duration: 1,
             ease: "expo.inOut",
         });
-        tl.to(".s2", {
-            yPercent: 100,
-            duration: 1,
-            ease: "expo.inOut",
-        }, "<");
+        tl.to(
+            ".s2",
+            {
+                yPercent: 100,
+                duration: 1,
+                ease: "expo.inOut",
+            },
+            "<"
+        );
 
         // Add a pulse glow on percentage before hiding
         tl.to(percentageRef.current, {
@@ -83,7 +92,8 @@ const LoaderSection4 = () => {
             pointerEvents: "none",
             ease: "power4.inOut",
             onComplete: () => {
-                if (containerRef.current) containerRef.current.style.display = "none";
+                if (containerRef.current)
+                    containerRef.current.style.display = "none";
             },
         });
     }, { scope: containerRef });
@@ -91,7 +101,8 @@ const LoaderSection4 = () => {
     return (
         <div
             ref={containerRef}
-            className="fixed inset-0 z-50 flex flex-col justify-center items-center overflow-hidden bg-gradient-to-b from-dark-blue via-dark-blue to-light-blue"
+            className="fixed inset-0 z-[60] flex flex-col justify-center items-center overflow-hidden 
+                 bg-gradient-to-b from-dark-blue via-dark-blue to-light-blue"
         >
             {/* Glass panels */}
             <div className="h-[50vh] w-full s1 bg-white/10 backdrop-blur-xl absolute top-0 border-b border-white/10 shadow-lg"></div>
@@ -101,13 +112,18 @@ const LoaderSection4 = () => {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1),transparent_60%)] pointer-events-none"></div>
 
             {/* Center text & progress */}
-            <div className="relative text-center z-10">
-                <p className="text-[60px] translate-y-[-60px] sm:text-[100px] font-bold text-white text tracking-wider uppercase">
+            <div className="relative text-center z-10 px-4 sm:px-6">
+                <p
+                    className="text text-white font-bold uppercase tracking-wider 
+                     text-[20px] md:text-[40px] lg:text-[60px] 
+                     lg:translate-y-[-30px] leading-tight"
+                >
                     VATSAL & PARTNER
                 </p>
                 <p
                     ref={percentageRef}
-                    className="text-[26px] tracking-widest font-medium text-white/70"
+                    className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] 
+                     tracking-widest font-medium text-white/70 mt-2"
                 >
                     0%
                 </p>

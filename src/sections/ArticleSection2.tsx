@@ -28,7 +28,7 @@ const Dialog = ({ article, onClose }: { article: any; onClose: () => void }) => 
     }, [])
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-lg bg-black/40">
+        <div className="fixed inset-0 z-[40] flex items-center justify-center backdrop-blur-lg bg-black/40">
             <div
                 ref={dialogRef}
                 className="relative w-[90%] md:w-[70%] lg:w-[60%] h-[70vh] rounded-2xl overflow-hidden 
@@ -111,23 +111,23 @@ const ArticleSection2 = () => {
             id: 1,
             title: "Tax Planning and Strategies",
             description:
-                "Explore the world of tax planning and strategies in this blog category. Discover valuable insights on minimizing tax liabilities, maximizing deductions, and optimizing your overall tax situation.",
+                "Explore the world of tax planning and strategies in this blog category. Discover valuable insights on minimizing tax liabilities, maximizing deductions, and optimizing your overall tax situation. Stay updated on the latest tax regulations and learn how to make strategic financial decisions that can benefit both individuals and businesses.",
             date: "July 17, 2023",
             image: "/images/services/s1.jpg",
         },
         {
             id: 2,
-            title: "Take charge of your personal finances",
+            title: "Take charge of your personal finances with the insights shared in this blog category",
             description:
-                "From budgeting and savings strategies to retirement planning and investment management, explore topics that help you build a secure financial future.",
+                "Take charge of your personal finances with the insights shared in this blog category. From budgeting and savings strategies to retirement planning and investment management, explore topics that help you build a secure financial future. Learn how to make smart financial decisions, grow your wealth, and navigate complex financial landscapes with confidence.",
             date: "July 17, 2023",
             image: "/images/services/s2.jpg",
         },
         {
             id: 3,
-            title: "Running a small business",
+            title: "Running a small business comes with its unique set of challenges",
             description:
-                "Running a small business comes with its unique set of challenges, particularly in the realm of accounting. Gain practical knowledge on managing bookkeeping and tracking expenses.",
+                "Running a small business comes with its unique set of challenges, particularly in the realm of accounting. Dive into this blog category to gain practical knowledge on managing bookkeeping, tracking expenses, understanding financial statements, and implementing effective accounting systems. Whether you’re a startup entrepreneur or a seasoned small business owner, these blog posts will provide you with essential tips and best practices for maintaining a healthy financial foundation.",
             date: "July 17, 2023",
             image: "/images/services/s3.jpg",
         },
@@ -146,14 +146,14 @@ const ArticleSection2 = () => {
             opacity: 1,
             y: 0,
             scale: 1,
-            duration: 0.8,
+            duration: 0.2,
             ease: "power2.out",
-            stagger: 0.15,
+            stagger: 0.2,
             scrollTrigger: {
                 trigger: containerRef.current,
                 start: "top 80%",
                 end: "bottom 20%",
-                toggleActions: "play none none reverse",
+                toggleActions: "play reverse play reverse",
             },
         })
     }, [])

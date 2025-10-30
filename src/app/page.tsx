@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
+import ScrollToTopButton from '@/components/ScrollToTopButton'
 import LenisProvider from '@/providers/LenisProvider'
 import AboutSection from '@/sections/AboutSection'
 import ArticleSection2 from '@/sections/ArticleSection2'
@@ -30,6 +31,7 @@ function page() {
         <ReviewsSection />
         <ArticleSection2 />
         <Footer />
+        <ScrollToTopButton />
       </LenisProvider>
     </div>
   )
