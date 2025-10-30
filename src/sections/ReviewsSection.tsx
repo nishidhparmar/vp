@@ -94,7 +94,8 @@ export default function ReviewsSection() {
                                         inventore deleniti illum.”
                                     </p>
                                 </div>
-                                <div className="mt-6">
+                                <div className="mt-6 flex items-center justify-between w-full">
+                                    <Image className="w-[100px]" src={'/images/logos/google-logo.png'} alt="google" width={100} height={100} />
                                     <ReactStars edit={false} count={5} value={5} size={22} color2={"#00fff0"} />
                                 </div>
                             </div>

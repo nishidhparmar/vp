@@ -2,7 +2,7 @@ import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import LenisProvider from '@/providers/LenisProvider'
 import AboutSection from '@/sections/AboutSection'
-import ArticleSection from '@/sections/ArticleSection'
+import ArticleSection2 from '@/sections/ArticleSection2'
 import HeroSection2 from '@/sections/HeroSection2'
 import LoaderSection4 from '@/sections/LoaderSection4'
 import OurTeamSection from '@/sections/OurTeamSection'
@@ -23,13 +23,12 @@ function page() {
         />
         <LoaderSection4 />
         <Header />
-        {/* <HeroSection /> */}
         <HeroSection2 />
         <AboutSection />
         <ServicesSection />
         <OurTeamSection />
         <ReviewsSection />
-        <ArticleSection />
+        <ArticleSection2 />
         <Footer />
       </LenisProvider>
     </div>

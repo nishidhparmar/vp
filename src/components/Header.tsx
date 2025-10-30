@@ -67,7 +67,7 @@ const Header = () => {
 
     return (
         <Fragment>
-            <div ref={containerRef} className='h-[10vh] d-header backdrop-blur-xl border-b border-white/10 shadow-lg z-10 fixed w-full top-0'>
+            <div ref={containerRef} className='h-[10vh] d-header backdrop-blur-xl border-b border-white/10 shadow-lg z-[100] fixed w-full top-0'>
                 <Container className='flex items-center justify-between w-full h-full'>
                     <div className='font-bold logo text-netural-white text-2xl flex items-center'>
                         VATSAL & PARTNER
@@ -89,7 +89,7 @@ const Header = () => {
                 </Container>
             </div>
 
-            <div ref={containerMRef} className='h-screen overflow-auto hidden shadow bg-dark-blue z-10 fixed w-screen top-0 '>
+            <div ref={containerMRef} className='h-screen overflow-auto hidden shadow bg-dark-blue z-[100] fixed w-screen top-0 '>
                 <div onClick={() => {
                     closeMenu()
                 }} className='text-netural-white text-3xl absolute right-10 top-[2.5vh]'>
