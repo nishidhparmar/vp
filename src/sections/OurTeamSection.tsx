@@ -21,7 +21,7 @@ interface DialogProps {
     onClose: () => void
 }
 
-// ----------------- Dialog Component -----------------
+
 const Dialog: React.FC<DialogProps> = ({ member, onClose }) => {
     const dialogRef = useRef<HTMLDivElement>(null)
 
@@ -29,7 +29,13 @@ const Dialog: React.FC<DialogProps> = ({ member, onClose }) => {
         gsap.fromTo(
             dialogRef.current,
             { opacity: 0, scale: 0.95, y: 30 },
-            { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: "power3.out" }
+            {
+                opacity: 1,
+                scale: 1,
+                y: 0,
+                duration: 0.6,
+                ease: "power3.out",
+            }
         )
     }, [])
 
@@ -45,49 +51,62 @@ const Dialog: React.FC<DialogProps> = ({ member, onClose }) => {
     }
 
     return (
-        <div className="fixed inset-0 z-[40] flex items-center justify-center backdrop-blur-lg bg-black/40 p-4">
+        <div className="fixed inset-0 z-[50] flex items-center justify-center backdrop-blur-lg bg-black/40 px-3 sm:px-6 py-6 sm:py-8">
             <div
                 ref={dialogRef}
-                className="relative w-full max-w-[800px] h-[80vh] md:h-[70vh] rounded-2xl overflow-hidden 
-                bg-gradient-to-br from-black/80 to-netural-900 border border-white/30 
-                shadow-[0_0_40px_rgba(255,255,255,0.1)] flex flex-col md:flex-row"
+                className="relative w-full max-w-[900px] h-[80vh] rounded-2xl overflow-hidden 
+                bg-gradient-to-br from-[#0a0a0a]/80 to-[#1a1a1a]/80
+                border border-white/30 shadow-[0_0_40px_rgba(255,255,255,0.1)] 
+                flex flex-col md:flex-row"
             >
+                {/* Close Button */}
                 <button
                     onClick={handleClose}
-                    className="absolute top-4 right-4 z-10 text-white bg-black/40 hover:bg-black/60 rounded-full px-3 py-1 text-sm font-semibold"
+                    className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 text-white bg-black/40 hover:bg-black/60 rounded-full px-2.5 sm:px-3 py-1 text-xs sm:text-sm font-semibold transition-all"
                 >
                     ✕
                 </button>
 
-                <div className="md:w-[350px] w-full h-[40%] md:h-full">
+                {/* Left Image Section */}
+                <div className="w-full md:w-1/2 h-[200px] sm:h-[250px] md:h-full shrink-0">
                     <Image
                         src={member.image}
                         alt={member.name}
                         className="object-cover h-full w-full"
                         width={600}
                         height={600}
+                        priority
                     />
                 </div>
 
-                <div className="md:w-1/2 w-full p-6 flex flex-col justify-between overflow-y-auto">
-                    <div className="space-y-3">
-                        <h3 className="text-2xl font-bold text-netural-white leading-tight">
+                {/* Right Content Section */}
+                <div className="w-full md:w-1/2 p-4 sm:p-6 flex flex-col justify-between overflow-y-auto max-h-[calc(80vh-60px)] md:max-h-full">
+                    <div className="space-y-3 sm:space-y-4">
+                        <h3 className="text-xl sm:text-2xl font-bold text-netural-white leading-tight">
                             {member.name}
                         </h3>
-                        <p className="text-sm text-netural-white/70 font-semibold">
+                        <p className="text-sm sm:text-base text-netural-white/70 font-semibold">
                             {member.designation}
                         </p>
-                        <p className="text-base text-netural-white/80 leading-relaxed">
+                        <p className="text-sm sm:text-base text-netural-white/80 leading-relaxed">
                             {member.description}
                         </p>
                     </div>
 
-
+                    <div className="mt-4 sm:mt-6">
+                        <button
+                            onClick={handleClose}
+                            className="w-full sm:w-auto rounded-lg bg-dark-blue text-white font-semibold text-sm sm:text-base px-4 sm:px-5 py-2 sm:py-2.5 transition-all duration-300 hover:bg-dark-blue/90"
+                        >
+                            Close
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     )
 }
+
 
 // ----------------- OurTeamSection -----------------
 const OurTeamSection = () => {
@@ -212,7 +231,7 @@ const OurTeamSection = () => {
             <Container className='p-section-padding-yx h-screen'>
                 <div className='space-y-4 h-full'>
                     <Heading darkColorText="Our" blueColorText='Team' />
-                    <Heading className='text-xl font-semibold text-netural-black' darkColorText="Meet Our Expert Team at Pinnacle Accounting & Tax Consultants" />
+                    <Heading className='font-semibold text-netural-black text-base md:text-xl' darkColorText="Meet Our Expert Team at Pinnacle Accounting & Tax Consultants" />
                     <div className='h-full flex flex-col mt-10'>
                         <div className='h-[calc(100%-50px)] flex gap-6 items-end overflow-hidden' ref={teamContainerRef}>
                             {teamMembers.map((member) => (

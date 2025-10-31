@@ -97,17 +97,17 @@ const AboutSection = () => {
     return (
         <div ref={containerRef} id='about' className='bg-[url("/images/about-mesh.png")] bg-no-repeat bg-cover'>
             <Container className='p-section-padding-yx  min-h-screen flex overflow-hidden gap-4'>
-                <div className='w-1/2 space-y-4 flex flex-col justify-start'>
+                <div className='md:w-1/2 w-full space-y-4 flex flex-col justify-start'>
                     <Heading darkColorText='About' blueColorText='Us' />
-                    <p className='text-2xl font-semibold text-netural-black t1'>Welcome to Pinnacle Accounting & Tax Consultants</p>
-                    <p className='text-lg font-medium text-netural-black/20 t2 leading-[36px]'>Pinnacle Accounting & Tax Consultants provides full accounting services for business and individuals throughout the year. We believe that accounting and tax is not only about numbers, it is more about personal and business goals. We understand the needs of each client and customise our approach accordingly. We strive to achieve 100% satisfaction in client experience using our expertise. We believe that the growth of our client is our growth. </p>
+                    <p className='text-lg md:text-2xl font-semibold text-netural-black t1'>Welcome to Pinnacle Accounting & Tax Consultants</p>
+                    <p className='leading-[28px] text-base md:text-lg font-medium text-netural-black/20 t2 md:leading-[36px]'>Pinnacle Accounting & Tax Consultants provides full accounting services for business and individuals throughout the year. We believe that accounting and tax is not only about numbers, it is more about personal and business goals. We understand the needs of each client and customise our approach accordingly. We strive to achieve 100% satisfaction in client experience using our expertise. We believe that the growth of our client is our growth. </p>
                     <Link href={'/#services'}>
                         <Button className='mt-6'
                             icon={<MdMiscellaneousServices className='text-xl ' />}
                         >Our Services</Button>
                     </Link>
                 </div>
-                <div className='w-1/2 flex flex-col pl-6  about-img-wrapper'>
+                <div className='md:w-1/2 w-full hidden md:flex flex-col pl-6  about-img-wrapper'>
                     <div className='w-[500px] about-image-wrapper h-[300px] self-end border-4 border-white overflow-hidden rounded-lg'>
                         <Image
                             alt='about'

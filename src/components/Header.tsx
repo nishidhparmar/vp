@@ -23,6 +23,7 @@ const Header = () => {
     useGSAP(() => {
         gsap.from(headerRef.current, {
             y: -100,
+            delay: 7,
             duration: 1,
             ease: 'power3.out',
         })
@@ -47,14 +48,14 @@ const Header = () => {
             .to(mobileMenuRef.current, {
                 xPercent: 0,
                 opacity: 1,
-                duration: 0.6,
+                duration: 1,
                 ease: 'power3.out',
             })
             .from(split.lines, {
                 opacity: 0,
                 y: 100,
                 stagger: 0.2,
-                duration: 0.6,
+                duration: 0.2,
             })
     }, [])
 
@@ -137,7 +138,7 @@ const Header = () => {
             {/* Mobile Menu */}
             <div
                 ref={mobileMenuRef}
-                className="hidden fixed top-0 w-screen h-screen bg-dark-blue z-[50] flex-col items-start text-netural-white text-5xl font-semibold uppercase p-10 gap-8 overflow-auto"
+                className="hidden fixed top-0 w-screen h-screen bg-dark-blue z-[50] flex-col items-start text-netural-white text-4xl font-semibold uppercase px-10 py-20 gap-8 overflow-auto"
             >
                 <button
                     onClick={closeMenu}

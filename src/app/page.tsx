@@ -16,12 +16,14 @@ function page() {
   return (
     <div className='relative'>
       <LenisProvider>
-        <AnimatedCursor
-          outerStyle={{ background: 'rgb(41, 192, 190)' }}
-          innerSize={30}
-          outerScale={4}
-          innerStyle={{ background: 'transparent', border: '1px solid rgb(41, 192, 190)' }}
-        />
+        <div className='hidden lg:block'>
+          <AnimatedCursor
+            outerStyle={{ background: 'rgb(41, 192, 190)' }}
+            innerSize={30}
+            outerScale={4}
+            innerStyle={{ background: 'transparent', border: '1px solid rgb(41, 192, 190)' }}
+          />
+        </div>
         <LoaderSection4 />
         <Header />
         <HeroSection2 />

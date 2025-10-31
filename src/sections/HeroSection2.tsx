@@ -82,8 +82,8 @@ const HeroSection2: React.FC = () => {
                 src="/videos/hero.mp4"
             />
 
-            <Container className="min-h-screen w-full z-10 flex items-center overflow-hidden px-4 sm:px-6 md:px-8">
-                <div className="w-full pt-[15vh] md:pt-[20vh] parallex">
+            <Container className="min-h-screen py-10 w-full z-10 flex items-center overflow-hidden px-4 sm:px-6 md:px-8">
+                <div className="w-full pt-[15vh] md:pt-[20vh] parallex space-y-6 md:space-y-0">
                     {/* Tagline */}
                     <p className="t1 text-center md:text-left text-light-blue font-semibold text-lg sm:text-xl md:text-2xl">
                         # Your Tax Consultants
@@ -91,7 +91,7 @@ const HeroSection2: React.FC = () => {
 
                     {/* Scrollable Text */}
                     <div className="overflow-x-hidden overflow-y-hidden scroll-text">
-                        <p className="t2 text-netural-white font-semibold text-[64px] sm:text-[100px] md:text-[160px] lg:text-[200px] text-nowrap uppercase leading-[1.1] inline-block">
+                        <p className="t2 text-netural-white font-semibold text-[64px] md:text-[160px] lg:text-[200px] text-nowrap uppercase leading-[1.1] inline-block">
                             Experienced Exceptional
                         </p>
                     </div>
@@ -102,7 +102,7 @@ const HeroSection2: React.FC = () => {
                     </p>
 
                     {/* Buttons */}
-                    <div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
+                    <div className="flex flex-col md:flex-row items-center gap-4 mt-8">
                         <Link target="_blank" href="https://calendly.com/pinnacle-accounting">
                             <Button className="btn w-full sm:w-auto" icon={<SlCalender className="text-xl" />}>
                                 Book Appointment

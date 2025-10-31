@@ -101,7 +101,7 @@ const LoaderSection4 = () => {
     return (
         <div
             ref={containerRef}
-            className="fixed inset-0 z-[60] flex flex-col justify-center items-center overflow-hidden 
+            className="fixed h-screen w-screen z-[60] flex flex-col justify-center items-center overflow-hidden 
                  bg-gradient-to-b from-dark-blue via-dark-blue to-light-blue"
         >
             {/* Glass panels */}
@@ -115,14 +115,14 @@ const LoaderSection4 = () => {
             <div className="relative text-center z-10 px-4 sm:px-6">
                 <p
                     className="text text-white font-bold uppercase tracking-wider 
-                     text-[20px] md:text-[40px] lg:text-[60px] 
-                     lg:translate-y-[-30px] leading-tight"
+                     text-[20px]  sm:text-[30px] md:text-[40px] lg:text-[60px] 
+                      leading-tight"
                 >
                     VATSAL & PARTNER
                 </p>
                 <p
                     ref={percentageRef}
-                    className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] 
+                    className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[50px] 
                      tracking-widest font-medium text-white/70 mt-2"
                 >
                     0%
